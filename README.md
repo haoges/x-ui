@@ -17,12 +17,12 @@
 # 安装&升级
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/haoges/x-ui/master/install.sh)
 ```
 
 ## 手动安装&升级
 
-1. 首先从 https://github.com/vaxilu/x-ui/releases 下载最新的压缩包，一般选择 `amd64`架构
+1. 首先从 https://github.com/haoges/x-ui/releases 下载最新的压缩包，一般选择 `amd64`架构
 2. 然后将这个压缩包上传到服务器的 `/root/`目录下，并使用 `root`用户登录服务器
 
 > 如果你的服务器 cpu 架构不是 `amd64`，自行将命令中的 `amd64`替换为其他架构
@@ -91,31 +91,8 @@ docker build -t x-ui .
 - 证书安装目录为/root/cert目录
 - 本脚本申请证书均为泛域名证书
 
-## Tg机器人使用（开发中，暂不可使用）
+## 更多功能规划中...
 
-> 此功能与教程由[FranzKafkaYu](https://github.com/FranzKafkaYu)提供
-
-X-UI支持通过Tg机器人实现每日流量通知，面板登录提醒等功能，使用Tg机器人，需要自行申请
-具体申请教程可以参考[博客链接](https://coderfan.net/how-to-use-telegram-bot-to-alarm-you-when-someone-login-into-your-vps.html)
-使用说明:在面板后台设置机器人相关参数，具体包括
-
-- Tg机器人Token
-- Tg机器人ChatId
-- Tg机器人周期运行时间，采用crontab语法  
-
-参考语法：
-- 30 * * * * * //每一分的第30s进行通知
-- @hourly      //每小时通知
-- @daily       //每天通知（凌晨零点整）
-- @every 8h    //每8小时通知  
-
-TG通知内容：
-- 节点流量使用
-- 面板登录提醒
-- 节点到期提醒
-- 流量预警提醒  
-
-更多功能规划中...
 ## 建议系统
 
 - CentOS 7+
@@ -134,10 +111,3 @@ TG通知内容：
 x-ui v2-ui
 ```
 
-## issue 关闭
-
-各种小白问题看得血压很高
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/vaxilu/x-ui.svg)](https://starchart.cc/vaxilu/x-ui)
